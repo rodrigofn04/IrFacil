@@ -103,7 +103,7 @@ export default function Home() {
           </p>
           <p>
           <strong> <MdEmail /> Email:</strong>
-           claudiafcnascimento@hotmail.com
+           claudiacfnascimento@hotmail.com
           </p>
         </div>
       </footer>

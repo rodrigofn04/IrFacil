@@ -24,15 +24,6 @@ export default function Contato() {
         >
           Email
         </a>
-
-        <a
-          href="https://www.instagram.com/claudia24cristina"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn"
-        >
-          Instagram
-        </a>
       </div>
       <div className="contato-img">
         <img src={ContatoImg} alt="" />
