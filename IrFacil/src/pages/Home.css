@@ -1,107 +1,154 @@
-.hero{
-    display: flex;
-    flex-wrap: wrap;
-    background: #00aee0;
-    color: #000;
-    padding: 40px;
-    align-items: center;
+:root {
+  --primary: #00aee0;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
 }
 
-.hero img{
-    max-width: 450px;
-    border-radius: 6px;
-    display: flex;
-    margin-right: 5rem;
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.hero-text{
-    font-size: 1.2rem;
-    padding: 1.3rem;
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.hero-text .btn{
-    margin-top: 1rem;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
-.quem-somos{
-    height: 300px;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1.3rem;
+.hero-text .btn {
+  background: #2F00FF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.btn{
-    display: inline-block;
-    padding: 10px 18px;
-    background: transparent;
-    border: 2px solid #000;
-    color: #000;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: smooth 0.3s;
+.hero-text .btn:hover {
+  background: #00007F;
+  border: 1p solid #f9f9f9;
 }
 
-.btn:hover{
-    background: #000;
-    color: #fff;
+.hero-img img {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
-.qr-code{
-    margin: 0 auto;
-    text-align: center;
-    display: inline-block;
-    padding: 10px 18px;
-    background: transparent;
-    border-radius: 6px;
+/* ===== Sessões Gerais ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.qr-code img{
-    max-width: 100px;
-    border-radius: 6px;
+h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-section{
-    padding: 50px 20px;
-    text-align: center;
+p {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.cards{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* mais largos */
+  gap: 15px; /* menos espaçamento */
+  justify-items: center;
+  margin-top: 20px;
 }
 
-.cards .card{
-    background: #fff;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 250px;
-    text-align: center;
-    max-height: 300px;
-    height: 300px;
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 380px; /* aumenta largura máxima */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.cards .card p {
-    padding: .2rem;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    text-align: left;
+.card:hover {
+  transform: translateY(-5px); /* efeito bonito */
 }
 
-.footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
-.footer-img img{
-    max-width: 300px;
-    border-radius: 6px;
-    display: flex;
-    margin-left: 5rem;
+/* ===== Imagens ===== */
+.hero-img img {
+  max-width: 500px; /* maior */
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
 }
 
+.motivacional img {
+  margin-top: 20px;
+  max-width: 750px; /* aumenta largura */
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+}
+
+
+/* ===== Preços ===== */
+.precos .pix {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.qr-code img {
+  margin-top: 15px;
+  max-width: 150px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: var(--bg-light);
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer img {
+  max-width: 320px; /* aumenta no rodapé também */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.footer h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
